@@ -70,7 +70,8 @@
     "admin/build/",
     "lib/",
     "www/",
-    "sounds",
+    "alarms/",
+    "sounds/",
     "io-package.json",
     "LICENSE",
     "main.js"
