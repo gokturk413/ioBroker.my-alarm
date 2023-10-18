@@ -15,6 +15,7 @@ const fs =      require('fs');
 const jsonfile = require('jsonfile');
 const cors = require('cors');
 const allowMethods = require('allow-methods');
+const path = require('path');
 
 let myalarm;
 let indexHtml;
@@ -729,7 +730,7 @@ class MyAlarm extends utils.Adapter {
     getSoundsName() {
 
         let element = {},sounds =[];
-        const soundsfolder =__dirname + '/admin/sounds/';
+        const soundsfolder = path.join(__dirname,'admin','sounds');//__dirname + '/admin/sounds/';
         const fs = require('fs');
         fs.readdirSync(soundsfolder).forEach(file => {
         //console.log(file);
