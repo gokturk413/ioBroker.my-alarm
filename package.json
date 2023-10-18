@@ -69,10 +69,10 @@
     "admin{,/!(src)/**}/!(tsconfig|tsconfig.*|.eslintrc).{json,json5}",
     "admin{,/!(src)/**}/*.{html,css,png,svg,jpg,js}",
     "admin/build/",
+    "admin/sounds/",
     "lib/",
     "www/",
     "alarms/",
-    "sounds/",
     "io-package.json",
     "LICENSE",
     "main.js"
