@@ -1,0 +1,133 @@
+{
+    "common": {
+        "name": "my-alarm",
+        "version": "0.0.1",
+        "news": {
+            "0.0.1": {
+                "en": "initial release",
+                "de": "Erstveröffentlichung",
+                "ru": "Начальная версия",
+                "pt": "lançamento inicial",
+                "nl": "Eerste uitgave",
+                "fr": "Première version",
+                "it": "Versione iniziale",
+                "es": "Versión inicial",
+                "pl": "Pierwsze wydanie",
+                "uk": "Початкова версія",
+                "zh-cn": "首次出版"
+            }
+        },
+        "title": "My Alarm",
+        "titleLang": {
+            "en": "My Alarm",
+            "de": "Mein Wecker",
+            "ru": "Мой будильник",
+            "pt": "Meu alarme",
+            "nl": "Mijn wekker",
+            "fr": "Mon alarme",
+            "it": "La mia sveglia",
+            "es": "Mi alarma",
+            "pl": "Mój alarm",
+            "uk": "Мій будильник",
+            "zh-cn": "我的闹钟"
+        },
+        "desc": {
+            "en": "Simple Datapoints Alarm System",
+            "de": "Einfaches Datenpunkt-Alarmsystem",
+            "ru": "Простая система сигнализации точек данных",
+            "pt": "Sistema de alarme simples de pontos de dados",
+            "nl": "Eenvoudig Datapoints-alarmsysteem",
+            "fr": "Système d'alarme de points de données simples",
+            "it": "Semplice sistema di allarme per punti dati",
+            "es": "Sistema de alarma de puntos de datos simple",
+            "pl": "Prosty system alarmowy punktów danych",
+            "uk": "Проста система сигналізації Datapoints",
+            "zh-cn": "简单数据点报警系统"
+        },
+        "authors": [
+            "Kamran Mustafayev <gokturk413@gmail.com>"
+        ],
+        "keywords": [
+            "Alarm",
+            "Datapoints Alarm"
+        ],
+        "license": "MIT",
+        "platform": "Javascript/Node.js",
+        "main": "main.js",
+        "icon": "my-alarm.png",
+        "enabled": true,
+        "extIcon": "https://raw.githubusercontent.com/gokturk413/ioBroker.my-alarm/master/admin/my-alarm.png",
+        "readme": "https://github.com/gokturk413/ioBroker.my-alarm/blob/master/README.md",
+        "loglevel": "info",
+        "mode": "daemon",
+        "type": "alarm",
+        "compact": true,
+        "localLink": "%protocol%://%ip%:%port%/",
+        "connectionType": "local",
+        "dataSource": "push",
+        "singleton": true,
+        "adminUI": {
+            "config": "materialize",
+            "tab": "materialize"
+        },
+        "adminTab": {
+            "singleton": false,
+            "name": {
+                "en": "My Alarm",
+                "de": "Mein Wecker",
+                "ru": "Мой будильник",
+                "pt": "Meu alarme",
+                "nl": "Mijn wekker",
+                "fr": "Mon alarme",
+                "it": "La mia sveglia",
+                "es": "Mi alarma",
+                "pl": "Mój alarm",
+                "uk": "Мій будильник",
+                "zh-cn": "我的闹钟"
+            },
+            "link": "",
+            "fa-icon": "info"
+        },
+        "supportCustoms": true,
+        "eraseOnUpload": true,
+        "dependencies": [
+            {
+                "js-controller": ">=3.3.22"
+            }
+        ],
+        "globalDependencies": [
+            {
+                "admin": ">=5.0.0"
+            }
+        ]
+    },
+    "native": {
+        "ip": "127.0.0.1",
+        "port": 8091,
+        "AlarmSoundUrl":""
+    },
+    "objects": [],
+    "instanceObjects": [
+        {
+            "_id": "info",
+            "type": "channel",
+            "common": {
+                "name": "Information"
+            },
+            "native": {}
+        },
+        {
+            "_id": "info.connection",
+            "type": "state",
+            "common": {
+                "role": "indicator.connected",
+                "name": "Device or service connected",
+                "type": "boolean",
+                "read": true,
+                "write": false,
+                "def": false
+            },
+            "native": {}
+        }
+    ]
+}

@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../../css/adapter.css" />
+    <link rel="stylesheet" type="text/css" href="../../lib/css/materialize.css">
+
+    <script type="text/javascript" src="../../lib/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../../socket.io/socket.io.js"></script>
+
+    <script type="text/javascript" src="../../js/translate.js"></script>
+    <script type="text/javascript" src="../../lib/js/materialize.js"></script>
+    <script type="text/javascript" src="../../js/adapter-settings.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="words.js"></script>
+</head>
+
+<body>
+
+    <!-- this is where the React components are loaded into -->
+    <!--<div class="m adapter-container" id="root"></div>-->
+    <!-- load compiled React scripts -->
+    <script type="text/javascript" src="build/tab.js"></script>
+    <iframe id="myalarmIframe" class="tabFrame" width="100%" height="100%" scrolling="no" src="" frameborder="0" >
+    </iframe>  
+    <script type="text/javascript">
+        $(function () {
+    
+            $('.tabFrame').load(function () {
+                var iframeContentWindow = this.contentWindow;
+                var height = iframeContentWindow.$(document).height();
+                this.style.height = height + 'px';
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        // This will be called by the admin adapter when the settings page loads
+        
+        debugger;
+        function load(settings) {
+            debugger;
+            document.getElementById('myalarmIframe').src = 'http://'+settings.ip+':'+settings.port;
+        };
+    </script>
+</body>
+
+</html>
