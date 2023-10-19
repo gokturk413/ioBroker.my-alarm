@@ -384,7 +384,8 @@ class MyAlarm extends utils.Adapter {
                     if (settings.port == _port) {
                         server.app.listen(parseInt(settings.port, 10),'127.0.0.1');
                     } else {
-                        console.log(`port: ${settings.port} was occupied, try port: ${_port}`);
+                        //console.log(`port: ${settings.port} was occupied, try port: ${_port}`);
+                        this.log.info(`port: ${settings.port} was occupied, try port: ${_port}`);
                     }
                 })
                 .catch(err => {
