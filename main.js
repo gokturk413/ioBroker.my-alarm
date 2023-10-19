@@ -183,7 +183,7 @@ class MyAlarm extends utils.Adapter {
             server.app.set( 'views', __dirname + '/views');
             server.app.set('view engine', 'html');
             server.app.use(express.static(__dirname + '/admin'));
-            express.mime.type['gif'] = 'image/gif';
+
             /*server.app.use(function (req, res, next) {
                 const AllLayers = server.app._router.stack;
                 const Layers = AllLayers.filter(x => x.name === 'bound dispatch' && x.regexp.test(req.path))
